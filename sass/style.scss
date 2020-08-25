@@ -18,18 +18,37 @@
 
 
 
-
 /* HEADER */
 
 .header{
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    .header__logo{
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .header__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        .header__back{
+            font-size: 20px;
+            color: #424242;
+            display: none;
+        }
+    
+        .header__logo{
+            flex:1;
+            text-align: center;
+        }
     }
 }
+
+
+
+
 
 
 
