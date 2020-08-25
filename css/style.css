@@ -11,41 +11,209 @@
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.header .header__logo {
+.header .header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.header .header__container .header__back {
+  font-size: 20px;
+  color: #424242;
+  display: none;
+}
+.header .header__container .header__logo {
+  flex: 1;
+  text-align: center;
+}
+
+/* SECTION LOCATION */
+.main-container-all-page .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  height: 50px;
+  -webkit-box-shadow: inset 1px 8px 13px -16px black;
+  -moz-box-shadow: inset 1px 8px 13px -16px black;
+  box-shadow: inset 1px 8px 13px -16px black;
+}
+.main-container-all-page .location .container-location {
+  display: flex;
+  flex-direction: row;
+}
+.main-container-all-page .location .container-location .icon-location {
+  color: #353535;
+  margin-right: 20px;
+}
+
+/* SECTION SLOGAN */
+.main-container-all-page .slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+.main-container-all-page .slogan .container-slogan {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.main-container-all-page .slogan .btn {
+  box-shadow: 2px 6px 12px 0px #9c9c9c;
+  background: linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
+  background-color: #eb6592;
+  border-radius: 27px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1em;
+  padding: 16px 27px;
+  text-decoration: none;
+  border: none;
+}
+
+/* SECTION TUTORIAL */
+.main-container-all-page .tutorial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main-container-all-page .tutorial .container-tutorial {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.main-container-all-page .tutorial .container-tutorial h1 {
+  margin-bottom: 30px;
+}
+.main-container-all-page .tutorial .container-tutorial .tutorial-step {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -webkit-box-shadow: 3px 3px 5px 1px #d9d9d9;
+  -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
+  box-shadow: 3px 3px 5px 1px #d9d9d9;
+  border-radius: 20px;
+  height: 75px;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+}
+.main-container-all-page .tutorial .container-tutorial .tutorial-step .step__number {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  background: #7a00cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+  margin-right: 20px;
+}
+.main-container-all-page .tutorial .container-tutorial .tutorial-step .tutorial-icon {
+  color: #585858;
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+/* SECTION RESTAURANT */
+.main-container-all-page .grid-restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background: #f3f3f3;
+  padding-bottom: 40px;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants {
+  width: 90%;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants .grid-restaurants__heading {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  width: 98%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 3px 3px 5px 1px #d9d9d9;
+  -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
+  box-shadow: 3px 3px 5px 1px #d9d9d9;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev .restaurant-prev__image img {
+  width: 100%;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev .restaurant-prev__description {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev .restaurant-prev__description .restaurant-prev__fav {
+  font-size: 1.5em;
 }
 
 /* FOOTER */
 .footer {
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
   background-color: #2d3436;
   color: white;
 }
-.footer .footer__heading {
+.footer .footer-container {
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.footer .footer-container .footer__heading {
   filter: invert(100%);
   width: 100px;
   margin-bottom: 20px;
 }
-.footer .nav {
+.footer .footer-container .nav {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.footer .nav .nav__link {
+.footer .footer-container .nav .nav__link {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.footer .nav .nav__link .utensils-icon {
+.footer .footer-container .nav .nav__link .utensils-icon {
   margin-right: 10px;
 }
-.footer .nav .nav__link .partner-icon {
+.footer .footer-container .nav .nav__link .partner-icon {
   margin-right: 10px;
 }
 
