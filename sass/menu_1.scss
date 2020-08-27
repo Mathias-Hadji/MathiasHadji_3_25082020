@@ -1,9 +1,24 @@
 @import "style.scss";
 
+.header{
+
+    .header__container{
+
+        .header__back{
+            display: block;
+        }
+    
+        .header__logo{
+
+        }
+    }
+}
+
 
 .main-container-page{
     display: flex;
     flex-direction: column;
+    background: #f0f0f0;
 
     .img-restaurant{
         img{
@@ -12,6 +27,8 @@
     }
 
     .restaurant-presentation{
+        position: relative;
+        bottom:30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -58,7 +75,7 @@
 
                 hr{
                     width: 40px;
-                    border: 1px solid #2ecc71;
+                    border: 1.5px solid #1dd1a1;
                     text-align: left;
                 }
 
@@ -70,49 +87,93 @@
                 margin-bottom: 30px;
 
 
-
-
                 .menu-item{
-                    height: 50px;
+                    width: 100%;
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding:10px;
-                    background: #ffffff;
                     margin-bottom: 10px;
                     border-radius: 10px;
                     -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
                     -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
                     box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+                    background: #ffffff;
 
-                    .menu-item__name{
+                    .menu-item-description{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 80%;
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
 
+                        .menu-item-description__title{
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+                        .menu-item-description__ingredient{
+                        
+                        }
                     }
 
-                    .menu-item__price{
+                    .menu-item-price{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: flex-end;
+                        width: 20%;
+                        margin-bottom: 10px;
+                    }
+
+                    .menu-item-add-shopping-list{
+                        display: flex;
+                        flex-direction: row;
+                        width: 20%;
+                        background:#1dd1a1;
+                        color:#ffffff;
+                        font-size: 1.2em;
+                        justify-content: center;
+                        align-items: center;
+                        border-top-right-radius: 10px 10px;
+                        border-bottom-right-radius: 10px 10px;
                     }
                 }
             }
         }
 
-        .restaurant-order{
-            margin-bottom: 50px;
 
-            .btn{
-                width: 180px;
-                box-shadow: 2px 6px 12px 0px #9c9c9c;
-                background:linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
-                background-color:#eb6592;
-                border-radius:27px;
-                cursor:pointer;
-                color:#ffffff;
-                font-family:Arial;
-                font-size:1em;
-                padding:16px 27px;
-                text-decoration:none;
-                border:none;                
-            }
-        }
+
+
+
+        
     }
+
+
+
+    .restaurant-order{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        background: #f0f0f0;
+
+        .btn{
+            width: 180px;
+            box-shadow: 3px 4px 5px 0px #899599;
+            background:linear-gradient(to bottom, #dcaffa 5%, #ab44b0 100%);
+            background-color:#dcaffa;
+            border-radius:26px;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Trebuchet MS;
+            font-size:15px;
+            font-weight:bold;
+            padding:14px 48px;
+            text-decoration:none;
+            border:none;
+        }
+    }  
 }
