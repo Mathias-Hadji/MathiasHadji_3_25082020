@@ -1,3 +1,34 @@
+/* Fonts */
+@font-face {
+  font-family: "robotoblack";
+  src: url("../fonts/roboto-black-webfont.woff2") format("woff2"), url("fonts/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"), url("../fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotothin";
+  src: url("../fonts/roboto-thin-webfont.woff2") format("woff2"), url("../fonts/roboto-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Variable */
 /* Mixin */
 /* Reset */
@@ -5,6 +36,20 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-family: "robotobold";
+}
+
+h2 {
+  font-size: 1.4em;
+  font-family: "robotobold";
+}
+
+p {
+  font-family: "robotoregular";
 }
 
 /* HEADER */
@@ -47,6 +92,10 @@
   display: flex;
   flex-direction: row;
 }
+.main-container-all-page .location .container-location p {
+  font-weight: 700;
+  color: #383838;
+}
 .main-container-all-page .location .container-location .icon-location {
   color: #353535;
   margin-right: 20px;
@@ -65,13 +114,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
   text-align: center;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
 }
-.main-container-all-page .slogan .btn {
+.main-container-all-page .slogan .container-slogan h1 {
+  margin-bottom: 30px;
+}
+.main-container-all-page .slogan .container-slogan p {
+  color: #575757;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.main-container-all-page .slogan .container-slogan .btn {
   box-shadow: 2px 6px 12px 0px #9c9c9c;
   background: linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
   background-color: #eb6592;
@@ -83,6 +139,7 @@
   padding: 16px 27px;
   text-decoration: none;
   border: none;
+  margin-bottom: 30px;
 }
 
 /* SECTION TUTORIAL */
@@ -114,23 +171,29 @@
   margin-bottom: 20px;
   background: #f5f5f5;
 }
-.main-container-all-page .tutorial .container-tutorial .tutorial-step .step__number {
+.main-container-all-page .tutorial .container-tutorial .tutorial-step .tutorial-step__number {
   position: relative;
   right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  padding: 5px;
-  background: #7a00cc;
+  height: 12px;
+  width: 12px;
+  padding: 8px;
+  background: #9356DC;
   color: #ffffff;
   text-align: center;
   font-size: 1em;
   margin-right: 20px;
 }
-.main-container-all-page .tutorial .container-tutorial .tutorial-step .tutorial-icon {
+.main-container-all-page .tutorial .container-tutorial .tutorial-step .tutorial-step__icon {
   color: #585858;
   font-size: 1.5em;
   margin-right: 20px;
+}
+.main-container-all-page .tutorial .container-tutorial .tutorial-step .tutorial-step__text {
+  font-weight: 700;
 }
 
 /* SECTION RESTAURANT */
@@ -163,6 +226,10 @@
   -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
   box-shadow: 3px 3px 5px 1px #d9d9d9;
 }
+.main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev p {
+  font-size: 1.2em;
+  font-weight: 100;
+}
 .main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev .restaurant-prev__image img {
   width: 100%;
   border-top-left-radius: 20px 20px;
@@ -183,6 +250,7 @@
 }
 .main-container-all-page .grid-restaurants .container-grid-restaurants .restaurant-prev .restaurant-prev__description .restaurant-prev__fav {
   font-size: 1.5em;
+  color: #4e4e4e;
 }
 
 /* FOOTER */
@@ -223,6 +291,13 @@
   margin-right: 10px;
 }
 
+/* Fonts */
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("../fonts/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .header .header__container .header__back {
   display: block;
 }
@@ -254,8 +329,12 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.main-container-page .restaurant-presentation .restaurant-headline h1 {
+  font-family: "shrikhandregular";
+}
 .main-container-page .restaurant-presentation .restaurant-headline .fav-icon {
   font-size: 1.5em;
+  color: #4e4e4e;
 }
 .main-container-page .restaurant-presentation .menu-presentation {
   display: flex;
@@ -266,6 +345,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  color: #353535;
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-category p {
   text-transform: uppercase;
@@ -273,7 +353,7 @@
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-category hr {
   width: 40px;
-  border: 1.5px solid #1dd1a1;
+  border: 2px solid #99E2D0;
   text-align: left;
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-items {
@@ -303,7 +383,11 @@
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-items .menu-item .menu-item-description .menu-item-description__title {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+.main-container-page .restaurant-presentation .menu-presentation .menu-items .menu-item .menu-item-description .menu-item-description__ingredient {
+  color: #494949;
+  font-size: 0.9em;
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-items .menu-item .menu-item-price {
   display: flex;
@@ -312,12 +396,14 @@
   align-items: flex-end;
   width: 20%;
   margin-bottom: 10px;
+  color: #353535;
+  font-weight: 600;
 }
 .main-container-page .restaurant-presentation .menu-presentation .menu-items .menu-item .menu-item-add-shopping-list {
   display: flex;
   flex-direction: row;
   width: 20%;
-  background: #1dd1a1;
+  background: #99E2D0;
   color: #ffffff;
   font-size: 1.2em;
   justify-content: center;
@@ -335,17 +421,27 @@
 }
 .main-container-page .restaurant-order .btn {
   width: 180px;
-  box-shadow: 3px 4px 5px 0px #899599;
-  background: linear-gradient(to bottom, #dcaffa 5%, #ab44b0 100%);
-  background-color: #dcaffa;
-  border-radius: 26px;
+  -moz-box-shadow: 3px 4px 12px 0px #899599;
+  -webkit-box-shadow: 3px 4px 12px 0px #899599;
+  box-shadow: 3px 4px 12px 0px #899599;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e079c5), color-stop(1, #bd3ed6));
+  background: -moz-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -webkit-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -o-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -ms-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: linear-gradient(to bottom, #e079c5 5%, #bd3ed6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e079c5", endColorstr="#bd3ed6",GradientType=0);
+  background-color: #e079c5;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Trebuchet MS;
-  font-size: 15px;
+  font-family: Arial;
+  font-size: 14px;
   font-weight: bold;
-  padding: 14px 48px;
+  padding: 15px 60px;
   text-decoration: none;
   border: none;
 }

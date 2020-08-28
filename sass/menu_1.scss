@@ -1,5 +1,17 @@
 @import "style.scss";
 
+
+/* Fonts */
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .header{
 
     .header__container{
@@ -50,11 +62,12 @@
 
 
             h1{
-
+                font-family: 'shrikhandregular';
             }
 
             .fav-icon{
                 font-size: 1.5em;
+                color:#4e4e4e;
             }
         }
 
@@ -67,6 +80,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 20px;
+                color:#353535;
 
                 p{
                     text-transform: uppercase;
@@ -75,7 +89,7 @@
 
                 hr{
                     width: 40px;
-                    border: 1.5px solid #1dd1a1;
+                    border: 2px solid $color-element-decoration-tertiary;
                     text-align: left;
                 }
 
@@ -109,11 +123,12 @@
 
                         .menu-item-description__title{
                             font-weight: bold;
-                            margin-bottom: 10px;
+                            margin-bottom: 5px;
                         }
 
                         .menu-item-description__ingredient{
-                        
+                            color:#494949;
+                            font-size: 0.9em;
                         }
                     }
 
@@ -124,13 +139,15 @@
                         align-items: flex-end;
                         width: 20%;
                         margin-bottom: 10px;
+                        color:#353535;
+                        font-weight: 600;
                     }
 
                     .menu-item-add-shopping-list{
                         display: flex;
                         flex-direction: row;
                         width: 20%;
-                        background:#1dd1a1;
+                        background:$color-element-decoration-tertiary;
                         color:#ffffff;
                         font-size: 1.2em;
                         justify-content: center;
@@ -161,17 +178,27 @@
 
         .btn{
             width: 180px;
-            box-shadow: 3px 4px 5px 0px #899599;
-            background:linear-gradient(to bottom, #dcaffa 5%, #ab44b0 100%);
-            background-color:#dcaffa;
-            border-radius:26px;
+            -moz-box-shadow: 3px 4px 12px 0px #899599;
+            -webkit-box-shadow: 3px 4px 12px 0px #899599;
+            box-shadow: 3px 4px 12px 0px #899599;
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e079c5), color-stop(1, #bd3ed6));
+            background:-moz-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+            background:-webkit-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+            background:-o-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+            background:-ms-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+            background:linear-gradient(to bottom, #e079c5 5%, #bd3ed6 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e079c5', endColorstr='#bd3ed6',GradientType=0);
+            background-color:#e079c5;
+            -webkit-border-radius:25px;
+            -moz-border-radius:25px;
+            border-radius:25px;
             display:inline-block;
             cursor:pointer;
             color:#ffffff;
-            font-family:Trebuchet MS;
-            font-size:15px;
+            font-family:Arial;
+            font-size:14px;
             font-weight:bold;
-            padding:14px 48px;
+            padding:15px 60px;
             text-decoration:none;
             border:none;
         }
