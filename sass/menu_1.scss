@@ -3,26 +3,12 @@
 
 /* Fonts */
 
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('../fonts/shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+  
 
 
 .header{
-
-    .header__container{
-
-        .header__back{
-            display: block;
-        }
-    
-        .header__logo{
-
-        }
+    .header__icon-backarrow{
+        display: block;
     }
 }
 
@@ -38,7 +24,7 @@
         }
     }
 
-    .restaurant-presentation{
+    .restaurant-menu{
         position: relative;
         bottom:30px;
         display: flex;
@@ -48,122 +34,109 @@
         background: #f0f0f0;
         border-top-left-radius: 30px 30px;
         border-top-right-radius: 30px 30px;
+        padding:3%;
 
 
 
-        .restaurant-headline{
+        .restaurant-menu-heading{
+            width: 90%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 90%;
             margin-top:40px;
             margin-bottom: 40px;
 
 
             h1{
                 font-family: 'shrikhandregular';
+                font-weight: 400;
+                font-size: 1.8em;
             }
 
-            .fav-icon{
+            i{
                 font-size: 1.5em;
                 color:#4e4e4e;
             }
         }
 
-        .menu-presentation{
+        .restaurant-menu-content{
             display: flex;
             flex-direction: column;
-            width: 95%;
+            width: 100%;
 
-            .menu-category{
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 20px;
-                color:#353535;
+            .restaurant-menu-content-category{
+                margin-bottom: 15px;
 
                 p{
                     text-transform: uppercase;
+                    margin-top:25px;
                     margin-bottom: 5px;
+
                 }
 
                 hr{
                     width: 40px;
                     border: 2px solid $color-element-decoration-tertiary;
-                    text-align: left;
+                    text-align: left
                 }
-
             }
 
-            .menu-items{
+            .restaurant-menu-content-item{
                 display: flex;
-                flex-direction: column;
-                margin-bottom: 30px;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+                -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+                box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+                background: #ffffff;
+                margin-bottom: 15px;
 
 
-                .menu-item{
-                    width: 100%;
+
+                .restaurant-menu-content-item-text{
+                    width: 80%;
                     display: flex;
-                    flex-direction: row;
-                    margin-bottom: 10px;
-                    border-radius: 10px;
-                    -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                    -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                    box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                    background: #ffffff;
+                    flex-direction: column;
+                    padding:2%;
 
-                    .menu-item-description{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        width: 80%;
-                        margin-left: 10px;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-
-                        .menu-item-description__title{
-                            font-weight: bold;
-                            margin-bottom: 5px;
-                        }
-
-                        .menu-item-description__ingredient{
-                            color:#494949;
-                            font-size: 0.9em;
-                        }
+                    .restaurant-menu-content-item-text-name{
+                        font-weight: bold;
+                        margin-bottom: 5px;
                     }
 
-                    .menu-item-price{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: flex-end;
-                        width: 20%;
-                        margin-bottom: 10px;
-                        color:#353535;
-                        font-weight: 600;
-                    }
-
-                    .menu-item-add-shopping-list{
-                        display: flex;
-                        flex-direction: row;
-                        width: 20%;
-                        background:$color-element-decoration-tertiary;
-                        color:#ffffff;
-                        font-size: 1.2em;
-                        justify-content: center;
-                        align-items: center;
-                        border-top-right-radius: 10px 10px;
-                        border-bottom-right-radius: 10px 10px;
+                    .restaurant-menu-content-item-text-ingredient{
+                        color:#494949;
+                        font-size: 0.9em;
                     }
                 }
+
+                .restaurant-menu-content-item-price{
+                    width: 20%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content:center;
+                    padding-bottom:2%;
+                    font-weight: bold;
+                    color:#353535;
+                    font-size: 1em;
+                }
+
+                .restaurant-menu-content-item-icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background:$color-element-decoration-tertiary;
+                    color:#ffffff;
+                    border-top-right-radius: 10px 10px;
+                    border-bottom-right-radius: 10px 10px;
+                    width: 20%;
+                    font-size: 1.2em;
+                }
             }
-        }
-
-
-
-
-
-        
+        }  
     }
 
 

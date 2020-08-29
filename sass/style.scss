@@ -47,6 +47,15 @@
 
 }
 
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+
 
 /* Variable */
 
@@ -85,7 +94,9 @@ p{
     font-family: 'robotoregular';
 }
 
-
+body{
+    background:#f3f3f3;
+}
 
 
 
@@ -93,26 +104,32 @@ p{
 
 .header{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 5%;
 
-    .header__container{
+    .header__icon-backarrow{
+        display: flex;
+        font-size: 20px;
+        color: #424242;
+        display: none;
+
+
+        a:visited{
+            color: #424242;
+        }
+    }
+
+    .header__logo-website{
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 90%;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        justify-content: center;
+        flex:1;
 
-        .header__back{
-            font-size: 20px;
-            color: #424242;
-            display: none;
-        }
-    
-        .header__logo{
-            flex:1;
-            text-align: center;
+        img{
+            width: 40%;
         }
     }
 }
@@ -124,33 +141,25 @@ p{
 
 .main-container-all-page{
 
-    .location{
+    .user-location{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         background: #f0f0f0;
+        color:#353535;
         height: 50px;
         -webkit-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
         -moz-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
         box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
 
+        i{
+            margin-right:15px;
+            font-size: 1.2em;
+        }
 
-        .container-location{
-            display: flex;
-            flex-direction: row;
-
-            p{
-                font-weight: 700;
-                color:#383838;
-            }
-
-
-            .icon-location{
-                color:#353535;
-                margin-right:20px;
-                font-size: 1.2em;
-            }
+        p{
+            font-weight: 700;
         }
     }
 }
@@ -159,47 +168,41 @@ p{
 /* SECTION SLOGAN */
 
 .main-container-all-page{
-    .slogan{
+    .slogan-website{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background:#f7f7f7;
-
-        .container-slogan{
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            justify-content: space-around;
-            margin-top: 40px;
+        text-align: center;
+        background: #f5f5f5;
+        padding: 10px 10px 10px 10px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        
+        h1{
             margin-bottom: 30px;
+        }
 
-            h1{
-                margin-bottom: 30px;
-            }
+        p{
+            color:#575757;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
 
-            p{
-                color:#575757;
-                font-size: 1.2em;
-                margin-bottom: 30px;
-            }
-
-            .btn{
-                box-shadow: 2px 6px 12px 0px #9c9c9c;
-                background:linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
-                background-color:#eb6592;
-                border-radius:27px;
-                cursor:pointer;
-                color:#ffffff;
-                font-family:Arial;
-                font-size:1em;
-                padding:16px 27px;
-                text-decoration:none;
-                border:none;
-                margin-bottom: 30px;
-            }
+        .btn{
+            box-shadow: 2px 6px 12px 0px #9c9c9c;
+            background:linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
+            background-color:#eb6592;
+            border-radius:27px;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:1em;
+            padding:16px 27px;
+            text-decoration:none;
+            border:none;
         }
     }
 }
@@ -211,64 +214,58 @@ p{
 
 .main-container-all-page{
 
-    .tutorial{
+    .working-guide-website{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        flex-direction: column;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: #ffffff;
 
-
-        .container-tutorial{
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-
-            h1{
-                margin-bottom: 30px;
-            }
-
-            .tutorial-step{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                border-radius: 20px;
-                height: 75px;
-                margin-bottom: 20px;
-                background: #f5f5f5;
-                
-                .tutorial-step__number{
-                    position: relative;
-                    right:10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
-                    height: 12px;
-                    width: 12px;
-                    padding: 8px;
-                    background: $color-element-decoration-primary;
-                    color: #ffffff;
-                    text-align: center;
-                    font-size: 1em;
-                    margin-right:20px;
-                }
-
-                .tutorial-step__icon{
-                    color:#585858;
-                    font-size:1.5em;
-                    margin-right:20px;
-                }
-
-                .tutorial-step__text{
-                    font-weight: 700;
-                }
-            }
+        h1{
+            margin-bottom: 30px;
         }
+
+        .step-block{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            border-radius: 20px;
+            height: 75px;
+            margin-bottom: 20px;
+            background: #f5f5f5;
+            
+            .step-block__number{
+                position: relative;
+                right:15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                height: 12px;
+                width: 12px;
+                padding: 8px;
+                background: $color-element-decoration-primary;
+                color: #ffffff;
+                text-align: center;
+                font-size: 1em;
+                margin-right:20px;
+            }
+
+            .step-block__icon{
+                color:#585858;
+                font-size:1.5em;
+                margin-right:20px;
+            }
+
+            .step-block__text{
+                font-weight: 700;
+            }
+        }     
     }
 }
 
@@ -279,76 +276,74 @@ p{
 /* SECTION RESTAURANT */
 
 .main-container-all-page{
+
     .grid-restaurants{
+        padding-top: 3%;
+        margin-bottom: 10%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin-top: 50px;
         background:#f3f3f3;
-        padding-bottom: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
 
-        .container-grid-restaurants{
-            width: 90%;
+        h1{
+            margin-bottom: 30px;
+        }
 
-            .grid-restaurants__heading{
-                margin-top: 40px;
-                margin-bottom: 20px;
+        .restaurant-prev{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+
+            .restaurant-prev__image{
+                width: 100%;
+                border-top-left-radius: 20px 20px;
+                border-top-right-radius: 20px 20px;
             }
 
-            .restaurant-prev{
+            .restaurant-prev-content-block{
+                width: 100%;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
-                background: #ffffff;
-                width: 98%;
-                border-radius: 20px;
-                margin-bottom: 20px;
-                -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-                box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+                padding-top: 10px;
+                padding-bottom: 10px;
 
-                p{
-                    font-family: 'Robotothin';
-                    font-weight: 800;
-                    font-size: 1.1em;
-                }
+                
+                .restaurant-prev-content-block-description{
+                    padding-left: 5%;
 
-
-                .restaurant-prev__image{
-
-                    img{
-                        width: 100%;
-                        border-top-left-radius: 20px 20px;
-                        border-top-right-radius: 20px 20px;
-                    }
-                }
-
-                .restaurant-prev__description{
-                    width: 90%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-
-
-                    .restaurant-prev__informations{
-                        a{
-                            text-decoration:none;
-                            color: #000000;
-                        }
-
+                    a{
+                        text-decoration: none;
+                        color: #000000;
                     }
 
-                    .restaurant-prev__fav{
-                        font-size: 1.5em;
-                        color:#4e4e4e;
+                    .restaurant-prev-content-block-description__name-restaurant{
+        
+                    }
+
+                    .restaurant-prev-content-block-description__city-restaurant{
+                        font-family: 'Robotothin';
+                        font-weight: 800;
+                        font-size: 1.1em;
                     }
                 }
             }
+
+            i{
+                font-size: 1.5em;
+                color:#4e4e4e;
+                padding-right: 5%;
+            }    
         }
     }
 }
@@ -358,43 +353,31 @@ p{
 /* FOOTER */
 
 .footer{
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #2d3436;
     color:white;
+    padding: 5%;
 
-    .footer-container{
-        width: 90%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        .footer__heading{
-            filter: invert(100%);
-            width: 100px;
-            margin-bottom: 20px;
-        }
+    .footer__logo-website{
+        filter: invert(100%);
+        width: 25%;
+        margin-bottom: 20px;
+    }
     
-        .nav{
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .footer-nav__link{
             display: flex;
-            flex-direction: column;
-            width: 100%;
-    
-            .nav__link{
-                display: flex;
-                flex-direction: row;
-                margin-top: 5px;
-                margin-bottom: 5px;
-    
-                .utensils-icon{
-                    margin-right:10px;
-                }
-    
-                .partner-icon{
-                    margin-right:10px;
-                }
+            flex-direction: row;
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            i{
+                margin-right:10px;
             }
         }
     }
