@@ -67,6 +67,39 @@ $color-element-decoration-tertiary:#99E2D0;
 
 /* Mixin */
 
+@mixin flexMid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin font-proprety-name-prev-restaurant () {
+    font-size: 1.4em;
+    
+}
+
+@mixin font-city-prev-restaurant () {
+    font-family: 'Robotothin';
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+@mixin external-shadow () {
+    -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+    -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+    box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+}
+
+@mixin inset-shadow () {
+    -webkit-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
+    -moz-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
+    box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);    
+}
+
+
+
+
 
 
 
@@ -96,6 +129,7 @@ p{
 
 body{
     background:#f3f3f3;
+    font-size: 16px;
 }
 
 
@@ -110,19 +144,19 @@ body{
     padding: 5%;
     background: #ffffff;
 
-    .header__icon-backarrow{
+    &__icon-backarrow{
         display: flex;
         font-size: 20px;
         color: #424242;
         display: none;
 
 
-        a:visited{
+        i:visited{
             color: #424242;
         }
     }
 
-    .header__logo-website{
+    &__logo-website{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -150,9 +184,7 @@ body{
         background: #f0f0f0;
         color:#353535;
         height: 50px;
-        -webkit-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
-        -moz-box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
-        box-shadow: inset 1px 8px 13px -16px rgba(0,0,0,1);
+        @include inset-shadow;
 
         i{
             margin-right:15px;
@@ -232,15 +264,17 @@ body{
             display: flex;
             flex-direction: row;
             align-items: center;
-            -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-            -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-            box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            @include external-shadow;
             border-radius: 20px;
             height: 75px;
             margin-bottom: 20px;
             background: #f5f5f5;
+
+            &:hover{
+                background: #f8ecfd;
+            }
             
-            .step-block__number{
+            &__number{
                 position: relative;
                 right:15px;
                 display: flex;
@@ -254,16 +288,20 @@ body{
                 color: #ffffff;
                 text-align: center;
                 font-size: 1em;
-                margin-right:20px;
+                margin-right:10px;
             }
 
-            .step-block__icon{
+            &__icon{
                 color:#585858;
                 font-size:1.5em;
-                margin-right:20px;
+                margin-right:30px;
+
+                &:hover{
+                    color: $color-element-decoration-primary;
+                }
             }
 
-            .step-block__text{
+            &__text{
                 font-weight: 700;
             }
         }     
@@ -293,18 +331,35 @@ body{
         }
 
         .restaurant-prev{
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: #ffffff;
             border-radius: 20px;
-            margin-bottom: 20px;
-            -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-            -moz-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
-            box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
+            margin-bottom: 5%;
+            @include external-shadow;
 
-            .restaurant-prev__image{
+
+            button{
+                width: 25%;
+                height: 10%;
+                position: absolute;
+                background-color:#7be3bd;
+                border-radius:3px;
+                display:inline-block;
+                color:#088f42;
+                font-size:1em;
+                font-weight:bold;
+                text-decoration:none;
+                border: none;
+                bottom: 80%;
+                left: 85%;
+                transform: translate(-50%, -50%);
+            }
+
+            &__image{
                 width: 100%;
                 border-top-left-radius: 20px 20px;
                 border-top-right-radius: 20px 20px;
@@ -318,33 +373,41 @@ body{
                 align-items: center;
                 padding-top: 10px;
                 padding-bottom: 10px;
+                margin-top: 2%;
+                margin-bottom: 2%;
 
                 
                 .restaurant-prev-content-block-description{
-                    padding-left: 5%;
+                    margin-left: 5%;
+
 
                     a{
                         text-decoration: none;
                         color: #000000;
                     }
 
-                    .restaurant-prev-content-block-description__name-restaurant{
-        
+                    &__name-restaurant{
+                        font-size: 1.4em;
                     }
 
-                    .restaurant-prev-content-block-description__city-restaurant{
-                        font-family: 'Robotothin';
-                        font-weight: 800;
-                        font-size: 1.1em;
+                    &__city-restaurant{
+                        @include font-city-prev-restaurant;
                     }
                 }
-            }
 
-            i{
-                font-size: 1.5em;
-                color:#4e4e4e;
-                padding-right: 5%;
-            }    
+
+                i{
+                    font-size: 1.8em;
+                    color:#4e4e4e;
+                    margin-right: 5%;
+                    cursor:pointer;
+                    
+    
+                    &:hover{
+                        color: $color-element-decoration-primary;
+                    }
+                }    
+            }         
         }
     }
 }
@@ -360,7 +423,7 @@ body{
     color:white;
     padding: 5%;
 
-    .footer__logo-website{
+    &__logo-website{
         filter: invert(100%);
         width: 25%;
         margin-bottom: 20px;
@@ -371,7 +434,7 @@ body{
         flex-direction: column;
         width: 100%;
 
-        .footer-nav__link{
+        &__link{
             display: flex;
             flex-direction: row;
             margin-top: 5px;
