@@ -136,17 +136,28 @@ body {
   margin-bottom: 30px;
 }
 .main-container-all-page .slogan-website .btn {
-  box-shadow: 2px 6px 12px 0px #9c9c9c;
-  background: linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
-  background-color: #eb6592;
-  border-radius: 27px;
+  -moz-box-shadow: 3px 4px 12px 0px #899599;
+  -webkit-box-shadow: 3px 4px 12px 0px #899599;
+  box-shadow: 3px 4px 12px 0px #899599;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e079c5), color-stop(1, #bd3ed6));
+  background: -moz-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -webkit-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -o-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -ms-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: linear-gradient(to bottom, #e079c5 5%, #bd3ed6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e079c5", endColorstr="#bd3ed6",GradientType=0);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 30px;
+  display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   font-size: 1em;
-  padding: 16px 27px;
+  padding: 20px 35px;
   text-decoration: none;
   border: none;
+  font-family: "Robotomedium";
+  font-weight: 100;
 }
 
 /* SECTION TUTORIAL */
@@ -337,7 +348,7 @@ body {
   padding: 3%;
 }
 .main-container-page .restaurant-menu .restaurant-menu-heading {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -353,6 +364,7 @@ body {
 .main-container-page .restaurant-menu .restaurant-menu-heading i {
   font-size: 1.5em;
   color: #4e4e4e;
+  margin-right: 5%;
 }
 .main-container-page .restaurant-menu .restaurant-menu-content {
   display: flex;
@@ -378,11 +390,11 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
   border-radius: 10px;
+  background: #ffffff;
+  margin-bottom: 15px;
   -webkit-box-shadow: 3px 3px 5px 1px #d9d9d9;
   -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
   box-shadow: 3px 3px 5px 1px #d9d9d9;
-  background: #ffffff;
-  margin-bottom: 15px;
 }
 .main-container-page .restaurant-menu .restaurant-menu-content .restaurant-menu-content-item .restaurant-menu-content-item-text {
   width: 80%;
@@ -428,7 +440,7 @@ body {
   background: #f0f0f0;
 }
 .main-container-page .restaurant-order .btn {
-  width: 180px;
+  width: 50%;
   -moz-box-shadow: 3px 4px 12px 0px #899599;
   -webkit-box-shadow: 3px 4px 12px 0px #899599;
   box-shadow: 3px 4px 12px 0px #899599;
@@ -439,19 +451,18 @@ body {
   background: -ms-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
   background: linear-gradient(to bottom, #e079c5 5%, #bd3ed6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e079c5", endColorstr="#bd3ed6",GradientType=0);
-  background-color: #e079c5;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 25px;
+  border-radius: 30px;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 15px 60px;
+  font-size: 1em;
+  padding: 20px 35px;
   text-decoration: none;
   border: none;
+  font-family: "Robotomedium";
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=menu_1.css.map */

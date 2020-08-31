@@ -136,17 +136,28 @@ body {
   margin-bottom: 30px;
 }
 .main-container-all-page .slogan-website .btn {
-  box-shadow: 2px 6px 12px 0px #9c9c9c;
-  background: linear-gradient(to bottom, #eb6592 5%, #9b00cf 100%);
-  background-color: #eb6592;
-  border-radius: 27px;
+  -moz-box-shadow: 3px 4px 12px 0px #899599;
+  -webkit-box-shadow: 3px 4px 12px 0px #899599;
+  box-shadow: 3px 4px 12px 0px #899599;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e079c5), color-stop(1, #bd3ed6));
+  background: -moz-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -webkit-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -o-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: -ms-linear-gradient(top, #e079c5 5%, #bd3ed6 100%);
+  background: linear-gradient(to bottom, #e079c5 5%, #bd3ed6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e079c5", endColorstr="#bd3ed6",GradientType=0);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 30px;
+  display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   font-size: 1em;
-  padding: 16px 27px;
+  padding: 20px 35px;
   text-decoration: none;
   border: none;
+  font-family: "Robotomedium";
+  font-weight: 100;
 }
 
 /* SECTION TUTORIAL */
@@ -315,6 +326,10 @@ body {
 }
 .footer .footer-nav__link i {
   margin-right: 10px;
+}
+.footer .footer-nav__link a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
