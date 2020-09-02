@@ -37,6 +37,17 @@
 }
 /* Variable */
 /* Mixin */
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Reset */
 * {
   margin: 0;
@@ -134,18 +145,25 @@ body {
 }
 .main-container-all-page .slogan-website .btn {
   background: linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
-  background-color: #e882d0;
-  border-radius: 28px;
-  display: inline-block;
-  cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 1em;
-  padding: 17px 24px;
-  text-decoration: none;
   border: none;
-  font-family: "Robotomedium";
-  font-weight: 100;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 1em;
+  font-family: "Robotoregular";
+  -webkit-box-shadow: 10px 10px 30px -1px #ababab;
+  -moz-box-shadow: 10px 10px 30px -1px #ababab;
+  box-shadow: 10px 10px 30px -1px #ababab;
+  transition: all 300ms;
+}
+.main-container-all-page .slogan-website .btn:hover {
+  transform: scale(1.15);
+  box-shadow: 10px 10px 30px -1px #3f3f3f;
+  background: linear-gradient(to bottom, #e299d1 5%, #ac62bb 100%);
 }
 
 /* SECTION TUTORIAL */
@@ -281,9 +299,14 @@ body {
 }
 .main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i {
   font-size: 1.8em;
-  color: #4e4e4e;
   margin-right: 5%;
   cursor: pointer;
+}
+.main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
+  color: #9356DC;
+}
+.main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
+  color: #9356DC;
 }
 .main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
   color: #9356DC;
@@ -357,9 +380,12 @@ body {
   font-size: 1.8em;
 }
 .main-container-page .restaurant-menu .restaurant-menu-heading i {
-  font-size: 1.5em;
-  color: #4e4e4e;
+  font-size: 1.8em;
   margin-right: 5%;
+  cursor: pointer;
+}
+.main-container-page .restaurant-menu .restaurant-menu-heading i:hover {
+  color: #9356DC;
 }
 .main-container-page .restaurant-menu .restaurant-menu-content {
   display: flex;
@@ -391,6 +417,8 @@ body {
   -webkit-box-shadow: 3px 3px 5px 1px #d9d9d9;
   -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
   box-shadow: 3px 3px 5px 1px #d9d9d9;
+  animation: slideDown 0.8s;
+  cursor: pointer;
 }
 .main-container-page .restaurant-menu .restaurant-menu-content .restaurant-menu-content-item .restaurant-menu-content-item-text {
   width: 80%;
@@ -431,43 +459,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin-bottom: 100px;
   background: #f0f0f0;
 }
 .main-container-page .restaurant-order .btn {
-  color: #ffffff;
+  width: 200px;
   background: linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
+  color: #ffffff;
   border: none;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
-  z-index: 1;
-  position: relative;
   border-radius: 50px;
   font-size: 1em;
   font-family: "Robotoregular";
-  -webkit-box-shadow: 3px 3px 5px 1px #d9d9d9;
-  -moz-box-shadow: 3px 3px 5px 1px #d9d9d9;
-  box-shadow: 3px 3px 5px 1px #d9d9d9;
+  -webkit-box-shadow: 10px 10px 30px -1px #ababab;
+  -moz-box-shadow: 10px 10px 30px -1px #ababab;
+  box-shadow: 10px 10px 30px -1px #ababab;
+  transition: all 300ms;
 }
-.main-container-page .restaurant-order .btn:hover::after {
-  opacity: 1;
-}
-.main-container-page .restaurant-order .btn::after {
-  content: "";
-  position: absolute;
-  background-color: #a300a3;
-  border-radius: 50px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
+.main-container-page .restaurant-order .btn:hover {
+  transform: scale(1.15);
+  box-shadow: 10px 10px 30px -1px #3f3f3f;
+  background: linear-gradient(to bottom, #e299d1 5%, #ac62bb 100%);
 }
 
 /*# sourceMappingURL=menu_1.css.map */

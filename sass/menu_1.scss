@@ -13,7 +13,6 @@
 
 
 .main-container-page{
-
     .img-restaurant{
         img{
             width: 100%;
@@ -49,9 +48,8 @@
             }
 
             i{
-                font-size: 1.5em;
-                color:#4e4e4e;
-                margin-right: 5%;
+                @include heart-icon;
+
             }
         }
 
@@ -87,6 +85,8 @@
                 background: #ffffff;
                 margin-bottom: 15px;
                 @include external-shadow;
+                animation: slideDown 0.8s;
+                cursor: pointer;
 
 
 
@@ -126,6 +126,7 @@
                     border-bottom-right-radius: 10px 10px;
                     width: 20%;
                     font-size: 1.2em;
+
                 }
             }
         }  
@@ -135,47 +136,12 @@
 
     .restaurant-order{
         @include flexMid;
-        width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 100px; 
         background: #f0f0f0;
 
         .btn{
-            color: #ffffff;
-            background:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
-            border: none;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 80px;
-            padding-right: 80px;
-            cursor: pointer;
-            z-index: 1;
-            position: relative;
-            border-radius: 50px;
-            font-size: 1em;
-            font-family: 'Robotoregular';
-            @include external-shadow;
-
-
-            &:hover{
-                &::after{
-                    opacity: 1;
-                }
-
-            }
-
-            &::after{
-                content:"";
-                position:absolute;
-                background-color: lighten(rgb(112, 0, 112), 10);
-                border-radius: 50px;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                opacity: 0;
-                z-index: -1;
-                transition: opacity 250ms;
-            }
+            width: 200px;
+            @include main-btn;
         }
     }  
 }

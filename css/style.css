@@ -37,6 +37,17 @@
 }
 /* Variable */
 /* Mixin */
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Reset */
 * {
   margin: 0;
@@ -134,18 +145,25 @@ body {
 }
 .main-container-all-page .slogan-website .btn {
   background: linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
-  background-color: #e882d0;
-  border-radius: 28px;
-  display: inline-block;
-  cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 1em;
-  padding: 17px 24px;
-  text-decoration: none;
   border: none;
-  font-family: "Robotomedium";
-  font-weight: 100;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 1em;
+  font-family: "Robotoregular";
+  -webkit-box-shadow: 10px 10px 30px -1px #ababab;
+  -moz-box-shadow: 10px 10px 30px -1px #ababab;
+  box-shadow: 10px 10px 30px -1px #ababab;
+  transition: all 300ms;
+}
+.main-container-all-page .slogan-website .btn:hover {
+  transform: scale(1.15);
+  box-shadow: 10px 10px 30px -1px #3f3f3f;
+  background: linear-gradient(to bottom, #e299d1 5%, #ac62bb 100%);
 }
 
 /* SECTION TUTORIAL */
@@ -281,9 +299,14 @@ body {
 }
 .main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i {
   font-size: 1.8em;
-  color: #4e4e4e;
   margin-right: 5%;
   cursor: pointer;
+}
+.main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
+  color: #9356DC;
+}
+.main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
+  color: #9356DC;
 }
 .main-container-all-page .grid-restaurants .restaurant-prev .restaurant-prev-content-block i:hover {
   color: #9356DC;

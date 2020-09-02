@@ -63,9 +63,15 @@ $color-element-decoration-primary:#9356DC;
 $color-element-decoration-secondary:#FF79DA;
 $color-element-decoration-tertiary:#99E2D0;
 
+$btn-shadow-size: 0.55rem;
+
+
+$btn-gradientbg-start:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
 
 
 /* Mixin */
+
+
 
 
 @mixin flexMid{
@@ -74,17 +80,6 @@ $color-element-decoration-tertiary:#99E2D0;
     align-items: center;
 }
 
-
-@mixin font-proprety-name-prev-restaurant () {
-    font-size: 1.4em;
-    
-}
-
-@mixin font-city-prev-restaurant () {
-    font-family: 'Robotothin';
-    font-weight: 800;
-    font-size: 1.2em;
-}
 
 @mixin external-shadow () {
     -webkit-box-shadow: 3px 3px 5px 1px rgba(217,217,217,1);
@@ -100,22 +95,54 @@ $color-element-decoration-tertiary:#99E2D0;
 
 
 @mixin main-btn () {
-	background:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
-	background-color:#e882d0;
-	border-radius:28px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:1em;
-	padding:17px 24px;
-	text-decoration:none;
-    border:none;
-    font-family: 'Robotomedium';
-    font-weight: 100;
+	background: $btn-gradientbg-start;
+    color:#ffffff;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1em;
+    font-family: 'Robotoregular';
+    -webkit-box-shadow: 10px 10px 30px -1px rgba(171,171,171,1);
+    -moz-box-shadow: 10px 10px 30px -1px rgba(171,171,171,1);
+    box-shadow: 10px 10px 30px -1px rgba(171,171,171,1);
+    transition: all 300ms;
+
+    &:hover{
+        transform:scale(1.15);
+        box-shadow: 10px 10px 30px -1px rgb(63, 63, 63);
+        background:linear-gradient(to bottom, #e299d1 5%, #ac62bb 100%);
+    }
 }
 
 
+@mixin heart-icon {
+    font-size: 1.8em;
+    margin-right: 5%;
+    cursor:pointer;
+
+    &:hover{
+        color: $color-element-decoration-primary;
+    }
+}
+
+
+
+/* Animations */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
@@ -386,16 +413,19 @@ body{
                     }
 
                     &__city-restaurant{
-                        @include font-city-prev-restaurant;
+                        font-family: 'Robotothin';
+                        font-weight: 800;
+                        font-size: 1.2em;
                     }
                 }
 
 
                 i{
-                    font-size: 1.8em;
-                    color:#4e4e4e;
-                    margin-right: 5%;
-                    cursor:pointer;
+                    @include heart-icon;
+                
+                    &:hover{
+                        color: $color-element-decoration-primary;
+                    }
                     
     
                     &:hover{
