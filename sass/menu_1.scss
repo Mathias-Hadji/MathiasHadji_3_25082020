@@ -6,20 +6,28 @@
 
 
 .header{
-    .header__icon-backarrow{
+    &__icon-backarrow{
         display: block;
     }
 }
 
 
 .main-container-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+        
     .img-restaurant{
         img{
             width: 100%;
         }
     }
 
-    .restaurant-menu{
+    .menu-prev{
+        width: 95%;
         @include flexMid;
         position: relative;
         bottom: 30px;
@@ -31,14 +39,14 @@
 
 
 
-        .restaurant-menu-heading{
+        &__heading{
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             margin-top:40px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
 
             h1{
@@ -47,19 +55,19 @@
                 font-size: 1.8em;
             }
 
-            i{
+            .heart-icon{
                 @include heart-icon;
-
-            }
+            }  
         }
 
-        .restaurant-menu-content{
+        .menu-prev-content{
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
+            position: relative;
 
-            .restaurant-menu-content-category{
+            &__meal-part{
                 margin-bottom: 15px;
 
                 p{
@@ -76,57 +84,97 @@
                 }
             }
 
-            .restaurant-menu-content-item{
-                display: flex;
-                flex-direction: row;
+            .menu-prev-content-item{
+                display:flex;
                 justify-content: space-between;
-                margin-bottom: 10px;
-                border-radius: 10px;
+                align-items: center;
+                width: 100%;
+                height:80px;
                 background: #ffffff;
-                margin-bottom: 15px;
                 @include external-shadow;
-                animation: slideDown 0.8s;
+                border-radius: 10px;
                 cursor: pointer;
+                overflow: hidden;
+                animation-duration: 1s; 
+                animation-timing-function: ease-in-out;
+                /*animation-iteration-count: infinite;*/
+                animation-direction: normal;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                animation-fill-mode: both;
 
 
+                &:nth-child(2) {
+                    animation-name: slideDown;
+                    animation-delay: 700ms;
+                }
 
-                .restaurant-menu-content-item-text{
-                    width: 80%;
-                    display: flex;
+                &:nth-child(3) {
+                    animation-name: slideDown;
+                    animation-delay: 900ms;
+                }
+
+                &:nth-child(4) {
+                    animation-name: slideDown;
+                    animation-delay: 1100ms;
+                }
+                
+
+                .menu-prev-content-item-dish{
+                    order: 1;
+                    display:flex;
                     flex-direction: column;
-                    padding:2%;
+                    padding: 2%;
+                    width: 100%;
+                    font-size: 1.5em;
 
-                    .restaurant-menu-content-item-text-name{
+                    &:hover + .menu-prev-content-item-icon{
+                        width:20%;
+                    }
+
+                    &:hover + .menu-prev-content-item-icon .fa-check-circle{
+                        transform:rotate(1turn);
+                    }                    
+
+                    &__title{
                         font-weight: bold;
-                        margin-bottom: 5px;
+                        font-size: 0.7em;
                     }
 
-                    .restaurant-menu-content-item-text-ingredient{
+                    &__ingredient{
                         color:#494949;
-                        font-size: 0.9em;
+                        font-size: 0.6em;
                     }
                 }
 
-                .restaurant-menu-content-item-price{
-                    width: 20%;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content:center;
-                    padding-bottom:2%;
-                    font-weight: bold;
-                    color:#353535;
-                    font-size: 1em;
+                
+                .menu-prev-content-item-icon{
+                    order: 3;
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    background-color: $color-element-decoration-tertiary;
+                    width: 0%;
+                    height: 100%;
+                    transition: all 1s;
+
+                    i{
+                        font-size: 1.5em;
+                        color: #fff;
+                        transition: all 1s;
+                      }
+
                 }
+                  
 
-                .restaurant-menu-content-item-icon{
-                    @include flexMid;
-                    background:$color-element-decoration-tertiary;
-                    color:#ffffff;
-                    border-top-right-radius: 10px 10px;
-                    border-bottom-right-radius: 10px 10px;
+                .menu-prev-content-item-price{
+                    order: 2;
                     width: 20%;
-                    font-size: 1.2em;
-
+                    height: 50%;
+                    font-weight: bold;
+                    font-size: 1em;
+                    align-self: flex-end;
+                    color:#353535;
                 }
             }
         }  
@@ -138,11 +186,13 @@
         @include flexMid;
         margin-bottom: 100px; 
         background: #f0f0f0;
+        text-align: center;
+        width: 100%;
 
         .btn{
-            width: 200px;
-            @include main-btn;
+            @include btn-effect();
         }
     }  
 }
+
 
