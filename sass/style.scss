@@ -63,16 +63,9 @@ $color-element-decoration-primary:#9356DC;
 $color-element-decoration-secondary:#FF79DA;
 $color-element-decoration-tertiary:#99E2D0;
 
-$btn-shadow-size: 0.55rem;
-
-
-$btn-gradientbg-start:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
 
 
 /* Mixin */
-
-
-
 
 @mixin flexMid{
     display: flex;
@@ -168,33 +161,6 @@ $btn-gradientbg-start:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
 }
 
 
-
-.container-loading{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-  }
-  
-  .loading-spinner{
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid lightgray;
-    border-top-color: $color-element-decoration-primary;
-    animation-name: rotate-loading-animation;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 200ms;
-    /*animation-iteration-count: infinite;*/
-    animation-direction: normal;
-  
-  }
-
-
-
 @keyframes rotate-loading-animation{
     0%{
       transform:rotate(0turn);
@@ -225,6 +191,8 @@ $btn-gradientbg-start:linear-gradient(to bottom, #e882d0 5%, #bd3ed6 100%);
 
 
 
+/* General */
+
 h1{
     font-size:1.6em ;
     font-family: 'robotobold';
@@ -243,6 +211,31 @@ body{
     background:#f3f3f3;
     font-size: 16px;
 }
+
+
+.container-loading{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+  }
+  
+  .loading-spinner{
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    border-top-color: $color-element-decoration-primary;
+    animation-name: rotate-loading-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 200ms;
+    /*animation-iteration-count: infinite;*/
+    animation-direction: normal;
+  }
+
 
 
 
@@ -282,7 +275,7 @@ body{
 
 
 
-/* SECTION LOCATION */
+/* SECTION USER LOCATION */
 
 .main-container-all-page{
     animation: loading 2s;
@@ -372,11 +365,9 @@ body{
             }
             
             &__number{
+                @include flexMid;
                 position: relative;
                 right:15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 border-radius: 50%;
                 height: 12px;
                 width: 12px;
@@ -419,86 +410,100 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin-top: 50px;
         background:#f3f3f3;
         padding-left: 5%;
         padding-right: 5%;
 
         h1{
+            margin-left: 3%;
             margin-bottom: 30px;
+            align-self: flex-start;
         }
 
-        .restaurant-prev{
+        .grid-restaurants-row{
             @include flexMid;
-            position: relative;
             flex-direction: column;
-            background: #ffffff;
-            border-radius: 20px;
-            margin-bottom: 5%;
-            @include external-shadow;
+            width: 100%;
 
 
-            button{
-                width: 25%;
-                height: 10%;
-                position: absolute;
-                background-color:#7be3bd;
-                border-radius:3px;
-                display:inline-block;
-                color:#088f42;
-                font-size:1em;
-                font-weight:bold;
-                text-decoration:none;
-                border: none;
-                bottom: 80%;
-                left: 85%;
-                transform: translate(-50%, -50%);
-            }
 
-            &__image{
-                width: 100%;
-                border-top-left-radius: 20px 20px;
-                border-top-right-radius: 20px 20px;
-            }
-
-            .restaurant-prev-content-block{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                margin-top: 2%;
-                margin-bottom: 2%;
-
-                
-                .restaurant-prev-content-block-description{
-                    margin-left: 5%;
-
-
-                    a{
-                        text-decoration: none;
-                        color: #000000;
-                    }
-
-                    &__name-restaurant{
-                        font-size: 1.4em;
-                    }
-
-                    &__city-restaurant{
-                        font-family: 'Robotothin';
-                        font-weight: 800;
-                        font-size: 1.2em;
-                    }
+            .restaurant-prev{
+                @include flexMid;
+                position: relative;
+                flex-direction: column;
+                background: #ffffff;
+                border-radius: 20px;
+                margin-bottom: 5%;
+                @include external-shadow;
+                width: 95%;
+                margin-right: 10px;
+                margin-left: 10px;
+    
+    
+                button{
+                    width: 25%;
+                    height: 10%;
+                    position: absolute;
+                    background-color:#7be3bd;
+                    border-radius:3px;
+                    display:inline-block;
+                    color:#088f42;
+                    font-size:1em;
+                    font-weight:bold;
+                    text-decoration:none;
+                    border: none;
+                    bottom: 80%;
+                    left: 85%;
+                    transform: translate(-50%, -50%);
                 }
-
-
-                .heart-icon{
-                    @include heart-icon;
-                }    
-            }         
-        }
+    
+                &__image{
+                    width: 100%;
+                    border-top-left-radius: 20px 20px;
+                    border-top-right-radius: 20px 20px;
+                }
+    
+                .restaurant-prev-content-block{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    margin-top: 2%;
+                    margin-bottom: 2%;
+    
+                    
+                    .restaurant-prev-content-block-description{
+                        margin-left: 5%;
+    
+    
+                        a{
+                            text-decoration: none;
+                            color: #000000;
+                        }
+    
+                        &__name-restaurant{
+                            font-size: 1.4em;
+                        }
+    
+                        &__city-restaurant{
+                            font-family: 'Robotothin';
+                            font-weight: 800;
+                            font-size: 1.2em;
+                        }
+                    }
+    
+    
+                    .heart-icon{
+                        @include heart-icon;
+                    }    
+                }         
+            }
+        } 
     }
 }
 

@@ -2,7 +2,6 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - Ohmyfood</title>
 
     <!-- Link CSS file -->
@@ -10,6 +9,10 @@
 
     <!-- Icons Fonts Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="css/laptop.css">
 </head>
 
 <body>
@@ -34,6 +37,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
         </section>
+
         <section class="slogan-website">
             <h1>Book the menu you like</h1>
             <p>Discover top-of-the-art restaurant we picked for you</p>
@@ -43,9 +47,7 @@
         <section class="working-guide-website">
             <h1>How it works</h1>
             <div class="step-block">
-                <div class="step-block__number">
-                    <p>1</p>
-                </div>
+                <p class="step-block__number">1</p>
                 <div class="step-block__icon">
                     <i class="fas fa-mobile-alt"></i>
                 </div>
@@ -73,70 +75,76 @@
             </div>
         </section>
 
+
         <section class="grid-restaurants">
             <h1>Restaurants</h1>
 
-            <section class="restaurant-prev">
-                <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/the-full-palette-restaurant.jpg"></a>
-                <button class="restaurant-prev__btn">New</button>
-                <div class="restaurant-prev-content-block">
-                    <div class="restaurant-prev-content-block-description">
-                        <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">The Full Palette</h2></a>
-                        <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+            <div class="grid-restaurants-row">
+                <section class="restaurant-prev">
+                    <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/the-full-palette-restaurant.jpg"></a>
+                    <button class="restaurant-prev__btn">New</button>
+                    <div class="restaurant-prev-content-block">
+                        <div class="restaurant-prev-content-block-description">
+                            <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">The Full Palette</h2></a>
+                            <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+                        </div>
+                        <div class="heart-icon">
+                            <svg viewBox="-15 0 540 512" title="heart">
+                                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="heart-icon">
-                        <svg viewBox="-15 0 540 512" title="heart">
-                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
+                </section>
+    
+                <section class="restaurant-prev">
+                    <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/the-enchanted-plate.jpg"></a>
+                    <button class="restaurant-prev__btn">New</button>
+                    <div class="restaurant-prev-content-block">
+                        <div class="restaurant-prev-content-block-description">
+                            <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">The Enchanted Plate</h2></a>
+                            <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+                        </div>
+                        <div class="heart-icon">
+                            <svg viewBox="-15 0 540 512" title="heart">
+                                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="restaurant-prev">
-                <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/the-enchanted-plate.jpg"></a>
-                <button class="restaurant-prev__btn">New</button>
-                <div class="restaurant-prev-content-block">
-                    <div class="restaurant-prev-content-block-description">
-                        <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">The Enchanted Plate</h2></a>
-                        <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+                </section>
+            </div>
+            
+            <div class="grid-restaurants-row">
+                <section class="restaurant-prev">
+                    <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/bastille-restaurant.jpg"></a>
+                    <div class="restaurant-prev-content-block">
+                        <div class="restaurant-prev-content-block-description">
+                            <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">Bastille</h2></a>
+                            <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+                        </div>
+                        <div class="heart-icon">
+                            <svg viewBox="-15 0 540 512" title="heart">
+                                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="heart-icon">
-                        <svg viewBox="-15 0 540 512" title="heart">
-                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
+                </section>
+    
+                <section class="restaurant-prev">
+                    <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/le-gourmand-restaurant.jpg"></a>
+                    <div class="restaurant-prev-content-block">
+                        <div class="restaurant-prev-content-block-description">
+                            <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">Le Gourmand</h2></a>
+                            <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
+                        </div>
+                        <div class="heart-icon">
+                            <svg viewBox="-15 0 540 512" title="heart">
+                                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="restaurant-prev">
-                <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/bastille-restaurant.jpg"></a>
-                <div class="restaurant-prev-content-block">
-                    <div class="restaurant-prev-content-block-description">
-                        <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">Bastille</h2></a>
-                        <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="-15 0 540 512" title="heart">
-                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <section class="restaurant-prev">
-                <a href="menu_1.html"><img class="restaurant-prev__image" src="img/restaurants/le-gourmand-restaurant.jpg"></a>
-                <div class="restaurant-prev-content-block">
-                    <div class="restaurant-prev-content-block-description">
-                        <a href="menu_1.html"><h2 class="restaurant-prev-content-block-description__name-restaurant">Le Gourmand</h2></a>
-                        <a href="menu_1.html"><p class="restaurant-prev-content-block-description__city-restaurant">New York</p></a>
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="-15 0 540 512" title="heart">
-                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                        </svg>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            
         </section>
     </main>
 
