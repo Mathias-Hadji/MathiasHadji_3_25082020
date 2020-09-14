@@ -1,0 +1,215 @@
+@import "style.scss";
+
+
+
+
+
+
+.header{
+    &__icon-backarrow{
+        display: block;
+    }
+}
+
+
+.main-container-page{
+    @include flexMid;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+        
+    .img-restaurant{
+        img{
+            width: 100%;
+        }
+    }
+
+    .menu-prev{
+        @include flexMid;
+        width: 95%;
+        position: relative;
+        bottom: 30px;
+        flex-direction: column;
+        background: #f0f0f0;
+        border-top-left-radius: 30px 30px;
+        border-top-right-radius: 30px 30px;
+        padding:3%;
+
+
+
+        &__heading{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:40px;
+            margin-bottom: 20px;
+
+
+            h1{
+                font-family: 'shrikhandregular';
+                font-weight: 400;
+                font-size: 1.8em;
+            }
+
+            .heart-icon{
+                @include heart-icon;
+            }  
+        }
+
+        .menu-prev-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+
+            &__meal-part{
+                margin-bottom: 3%;
+
+                p{
+                    text-transform: uppercase;
+                    margin-top:25px;
+                    margin-bottom: 5px;
+
+                }
+
+                hr{
+                    width: 40px;
+                    border: 2px solid $color-element-decoration-tertiary;
+                }
+            }
+
+
+            .menu-prev-content-item{
+                position: relative;
+                display:flex;
+                flex-direction: row-reverse;
+                width: 100%;
+                height: 80px;
+                @include external-shadow;
+                border-radius: 15px;
+                cursor: pointer;
+                overflow: hidden;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 700ms;
+                animation-direction: normal;
+                animation-fill-mode: both;
+                animation-name: slideDown;
+                background-color: #fff;
+                margin-bottom: 15px;
+
+
+                .menu-prev-content-item-dish{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+
+                    &:hover + .menu-prev-content-item-check{
+                        width: 30%;
+                    }
+
+                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block{
+                        transform: translateX(0);
+                        width: 100%;
+                    }
+
+                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block .fa-check-circle{
+                        transform: rotate(1turn);
+                    }
+
+                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name {
+                        display: none;
+                    }
+
+                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name-hide{
+                        display: block;
+                    }
+
+                    .menu-prev-content-item-dish-block{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 85%;
+                        width: 80%;
+                        margin-left: 10px;
+                        
+
+                        &__title{
+                            font-size: 1.1em;
+                            font-weight: bold;
+                        }
+
+                        &__ingredient{
+                            font-size: 1em;
+                            color: rgb(63, 63, 63);
+                            
+                            .menu-prev-content-item-dish-block__ingredient-name-hide{
+                                display: none;
+                            }
+                        }
+
+                    }
+                    
+                }
+
+                .menu-prev-content-item-check{
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: 0px;
+                    transition: all 500ms;
+
+                    
+                    &__icon-block{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        width: 0%;
+                        background-color: $color-element-decoration-tertiary;
+                        transition: all 700ms;
+                        transform: translateX(20px);
+                        
+                        .fa-check-circle{
+                            color: #fff;
+                            font-size: 1.5em;
+                            transform: rotate(0turn);
+                            transition: all 700ms;                            
+                        }
+                    }
+
+                    
+                    &__price{
+                        font-weight: bold;
+                        margin-right: 30px;
+                        margin-bottom: 10px;
+                        align-self: flex-end;
+                        color: rgb(63, 63, 63);
+                    }
+                }
+            }
+        }  
+    }
+
+
+
+    .restaurant-order{
+        @include flexMid;
+        margin-bottom: 100px; 
+        background: #f0f0f0;
+        text-align: center;
+        width: 100%;
+
+        .btn{
+            @include btn-effect();
+        }
+    }  
+}
+
+

@@ -89,7 +89,7 @@
 
 
 
-/* SECTION RESTAURANT */
+/* SECTION RESTAURANT PAGE D'ACCUEIL */
 
 .main-container-all-page{
 
@@ -102,6 +102,125 @@
 }
 
 
+
+
+/* SECTION MENUS */
+
+.main-container-page{
+
+    .menu-prev{
+
+        &__heading{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:40px;
+            margin-bottom: 20px;
+
+
+            h1{
+                font-family: 'shrikhandregular';
+                font-weight: 400;
+                font-size: 3em;
+            }
+
+            .heart-icon{
+
+            }  
+        }
+
+        .menu-prev-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+
+            &__meal-part{
+                margin-bottom: 3%;
+
+                p{
+                    text-transform: uppercase;
+                    margin-top:30px;
+                    margin-bottom: 5px;
+                    font-size: 1.2em;
+                }
+
+                hr{
+                    width: 45px;
+                }
+            }
+
+
+            .menu-prev-content-item{
+
+
+
+                .menu-prev-content-item-dish{
+
+
+                    &:hover + .menu-prev-content-item-check{
+                        width: 10%;
+                    }
+
+                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block{
+
+                    }
+
+                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block .fa-check-circle{
+
+                    }
+
+                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name {
+                        display: block;
+                    }
+
+                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name-hide{
+                        display: none;
+                    }
+                    
+                }
+
+                .menu-prev-content-item-check{
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: 0px;
+                    transition: all 500ms;
+
+                    
+                    &__icon-block{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        width: 0%;
+                    
+                        transition: all 700ms;
+                        transform: translateX(20px);
+                        
+                        .fa-check-circle{
+                            color: #fff;
+                            font-size: 1.5em;
+                            transform: rotate(0turn);
+                            transition: all 700ms;                            
+                        }
+                    }
+
+                    
+                    &__price{
+                        font-weight: bold;
+                        margin-right: 30px;
+                        margin-bottom: 10px;
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }  
+    }
+}
 
 /* FOOTER */
 
