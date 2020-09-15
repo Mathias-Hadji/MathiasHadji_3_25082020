@@ -83,15 +83,12 @@
 
 
             .menu-prev-content-item{
-                position: relative;
                 display:flex;
-                flex-direction: row-reverse;
                 width: 100%;
                 height: 80px;
                 @include external-shadow;
                 border-radius: 15px;
                 cursor: pointer;
-                overflow: hidden;
                 animation-duration: 1s;
                 animation-timing-function: ease-in-out;
                 animation-delay: 700ms;
@@ -100,18 +97,19 @@
                 animation-name: slideDown;
                 background-color: #fff;
                 margin-bottom: 15px;
+                overflow: hidden;
+                
 
 
                 .menu-prev-content-item-dish{
-                    position: absolute;
                     display: flex;
                     justify-content: center;
-                    flex-direction: column;
+                    align-items: center;
                     width: 100%;
                     height: 100%;
 
                     &:hover + .menu-prev-content-item-check{
-                        width: 30%;
+                        width: 25%;
                     }
 
                     &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block{
@@ -136,7 +134,7 @@
                         flex-direction: column;
                         justify-content: space-around;
                         height: 85%;
-                        width: 80%;
+                        width: 100%;
                         margin-left: 10px;
                         
 
@@ -155,15 +153,24 @@
                         }
 
                     }
+
+                    &__price{
+                        display: flex;
+                        align-items: flex-end;
+                        height: 80%;
+                        font-weight: bold;
+                        margin-right: 30px;
+                        color: rgb(63, 63, 63);
+                    }
                     
                 }
 
                 .menu-prev-content-item-check{
-                    z-index: 1;
                     display: flex;
                     flex-direction: row-reverse;
                     width: 0px;
                     transition: all 500ms;
+                    overflow: hidden;
 
                     
                     &__icon-block{
@@ -183,16 +190,52 @@
                             transition: all 700ms;                            
                         }
                     }
-
-                    
-                    &__price{
-                        font-weight: bold;
-                        margin-right: 30px;
-                        margin-bottom: 10px;
-                        align-self: flex-end;
-                        color: rgb(63, 63, 63);
-                    }
                 }
+            }
+
+            .menu-prev-content-item:nth-child(2) {
+                animation-name: slideDown;
+                animation-delay: 700ms;
+            }
+              
+              .menu-prev-content-item:nth-child(3) {
+                animation-name: slideDown;
+                animation-delay: 900ms;
+            }
+
+              .menu-prev-content-item:nth-child(4) {
+                animation-name: slideDown;
+                animation-delay: 1100ms;
+            }
+
+            .menu-prev-content-item:nth-child(5) {
+                animation-name: slideDown;
+                animation-delay: 700ms;
+            }
+              
+              .menu-prev-content-item:nth-child(6) {
+                animation-name: slideDown;
+                animation-delay: 900ms;
+            }
+
+              .menu-prev-content-item:nth-child(7) {
+                animation-name: slideDown;
+                animation-delay: 1100ms;
+            }
+
+            .menu-prev-content-item:nth-child(8) {
+                animation-name: slideDown;
+                animation-delay: 700ms;
+            }
+              
+              .menu-prev-content-item:nth-child(9) {
+                animation-name: slideDown;
+                animation-delay: 900ms;
+            }
+
+              .menu-prev-content-item:nth-child(10) {
+                animation-name: slideDown;
+                animation-delay: 1100ms;
             }
         }  
     }
