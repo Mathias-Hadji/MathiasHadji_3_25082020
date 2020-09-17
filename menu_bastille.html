@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+
+<!-- HEAD -->
 <head>
     <meta charset="UTF-8">
+
+    <!-- Titre de la page -->
     <title>Menu Bastille - Ohmyfood</title>
-        <!--LIEN VERS LE FICHIER CSS-->
+
+    <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="css/menus.css">
-        <!--Fonts Awesome Icons-->
+
+    <!-- Fonts Awesome Icones -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
-    <!-- Responsive -->
+    <!-- Responsive Media Queries -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="css/laptop.css">
-
 </head>
+
+
+<!-- BODY -->
 <body>
+
+    <!-- HEADER -->
     <header class="header">
         <div class="header__icon-backarrow">
             <a href="index.html"><i class="fas fa-arrow-left"></i></a>
@@ -23,185 +34,193 @@
         </div>
     </header>
 
+    <!-- MAIN -->
+    <main class="menu-restaurant">
 
-    <main class="main-container-page">
-        <div class="img-restaurant">
+        <!-- Bannière image -->
+        <div class="menu-restaurant__banner">
             <img src="img/restaurants/bastille-restaurant.jpg" alt="Photo représentant un plat de restaurant">
         </div>
-        <div class="menu-prev">
-            <div class="menu-prev__heading">
-                <h1>Bastille</h1>
-                <div class="heart-icon">
-                    <svg viewBox="-15 0 540 512">
-                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                    </svg>
+
+        <!-- Menu du restaurant -->
+        <section class="menu-restaurant-preview">
+
+            <!-- Container menu -->
+            <div class="menu-restaurant-preview-container">
+                <!--Nom restaurant -->
+                <div class="menu-restaurant-preview-heading">
+                    <h1>Bastille</h1>
+                    <div class="menu-restaurant-preview-heading__heart-icon">
+                        <svg viewBox="-15 0 540 512">
+                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                        </svg>
+                    </div>
                 </div>
+
+                <!-- Contenu menu -->
+                <section class="menu-restaurant-preview-content">
+
+                    <!-- Partie 1/3 du menu -->
+                    <div class="menu-restaurant-preview-content__meal-category">
+                        <p>Entrees</p>
+                        <hr>
+                    </div>
+
+                    <!-- Plat du menu -->
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item1">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Citrus Squid Carpaccio</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with orange zest</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">25€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item2">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Grandmother's Vegetable Soup</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">Carrots, parsnips, Jerusalem artichoke</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">35€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item3">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Onion Soup</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">Revisited</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">20€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- Partie 2/3 du menu -->
+                    <div class="menu-restaurant-preview-content__meal-category">
+                        <p>Main dish</p>
+                        <hr>
+                    </div>
+
+                    <!-- Plat du menu -->                
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item1">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Scallops</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with mashed parsnip</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">40€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->                
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item2">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Magret de canard</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with mashed potatoes</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">35€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->                
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item3">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Game Hen</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with vegetable gnocchis</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">44€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Partie 3/3 du menu -->
+                    <div class="menu-restaurant-preview-content__meal-category">
+                        <p>Desserts</p>
+                        <hr>
+                    </div>
+
+                    <!-- Plat du menu -->                
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item1">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Floral Ice Cream</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with hazelnut butter</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">18€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item2">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Chocolate Lava Cake</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">Revisited</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">22€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Plat du menu -->                
+                    <div class="menu-restaurant-preview-content-item menu-restaurant-preview-content-item3">
+                        <div class="menu-restaurant-preview-content-item-dish">
+                            <p class="menu-restaurant-preview-content-item-dish__name">Napolean</p>
+                            <div class="menu-restaurant-preview-content-item-dish-informations">
+                                <p class="menu-restaurant-preview-content-item-dish-informations__ingredient">with blueberries and marzipan</p>
+                                <p class="menu-restaurant-preview-content-item-dish-informations__price">23€</p>
+                            </div>
+                        </div>
+                        <div class="menu-restaurant-preview-content-item__check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <!-- Bouton Commander -->                
+                    <div class="menu-restaurant-preview-content-order">
+                        <button class="menu-restaurant-preview-content-order__main-btn">Order</button>
+                    </div>
+                </section>               
             </div>
-
-            <div class="menu-prev-content">
-                
-                <div class="menu-prev-content__meal-part">
-                    <p>Entrees</p>
-                    <hr>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Citrus Squid Carpaccio</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with orange zest</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">25€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Grandmother's Vegetable Soup</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">Carrots, parsnips, Jerusalem artichoke</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">35€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Onion Soup</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">Revisited</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">20€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                
-
-                <div class="menu-prev-content__meal-part">
-                    <p>Main Dish</p>
-                    <hr>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Scallops</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with mashed parsnip</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">40€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Magret de canard</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with mashed potatoes</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">35€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Game Hen</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with vegetable gnocchis</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">44€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content__meal-part">
-                    <p>Desserts</p>
-                    <hr>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Floral Ice Cream</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with hazelnut butter</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">18€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Chocolate Lava Cake</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">Revisited</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">22€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-
-                <div class="menu-prev-content-item">
-                    <div class="menu-prev-content-item-dish">
-                        <div class="menu-prev-content-item-dish-block">
-                            <p class="menu-prev-content-item-dish-block__title">Napolean</p>
-                            <p class="menu-prev-content-item-dish-block__ingredient"><span class="menu-prev-content-item-dish-block__ingredient-name">with blueberries and marzipan</span><span class="menu-prev-content-item-dish-block__ingredient-name-hide">...</span></p>
-                        </div>
-                        <p class="menu-prev-content-item-dish__price">23€</p>
-                    </div>
-                    <div class="menu-prev-content-item-check">
-                        <div class="menu-prev-content-item-check__icon-block">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                     </div>
-                </div>
-            </div> 
-        </div>
-
-
-        <div class="restaurant-order">
-            <button class="btn">Order</button>
-        </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
+
+        <!-- Logo site -->
         <img class="footer__logo-website" src="img/logo/ohmyfood@2x.svg" alt="logo website">
+        
+        <!-- Nav footer -->
         <nav class="footer-nav">
             <div class="footer-nav__link">
                 <i class="fas fa-utensils"></i>
@@ -219,5 +238,6 @@
             </div>
         </nav>   
     </footer>
+
 </body>
 </html>

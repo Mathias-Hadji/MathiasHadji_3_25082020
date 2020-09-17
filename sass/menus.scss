@@ -2,8 +2,7 @@
 
 
 
-
-
+/* HEADER */
 
 .header{
     &__icon-backarrow{
@@ -12,32 +11,44 @@
 }
 
 
-.main-container-page{
+/* MAIN */
+
+.menu-restaurant{
     @include flexMid;
     flex-direction: column;
     width: 100%;
-    position: relative;
-        
-    .img-restaurant{
+
+    /* Bannière image */
+    
+    .menu-restaurant__banner{
         img{
             width: 100%;
         }
     }
 
-    .menu-prev{
-        @include flexMid;
-        width: 95%;
+    /* Menu du restaurant */
+
+    .menu-restaurant-preview{
         position: relative;
+        @include flexMid;
+        width: 100%;
         bottom: 30px;
         flex-direction: column;
-        background: #f0f0f0;
         border-top-left-radius: 30px 30px;
         border-top-right-radius: 30px 30px;
-        padding:3%;
+        background: $color-bg;
+
+        .menu-restaurant-preview-container{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
 
 
 
-        &__heading{
+        /* Nom du restaurant */
+
+        .menu-restaurant-preview-heading{
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -53,19 +64,24 @@
                 font-size: 1.8em;
             }
 
-            .heart-icon{
+            .menu-restaurant-preview-heading__heart-icon{
                 @include heart-icon;
             }  
         }
 
-        .menu-prev-content{
+
+        /* Contenu du menu */
+
+        .menu-restaurant-preview-content{
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            position: relative;
 
-            &__meal-part{
+
+            /* Partie 1/3 du menu */
+
+            &__meal-category{
                 margin-bottom: 3%;
 
                 p{
@@ -82,10 +98,12 @@
             }
 
 
-            .menu-prev-content-item{
-                display:flex;
+            /* Plat du menu */
+
+            .menu-restaurant-preview-content-item{
                 width: 100%;
                 height: 80px;
+                display:flex;
                 @include external-shadow;
                 border-radius: 15px;
                 cursor: pointer;
@@ -98,161 +116,117 @@
                 background-color: #fff;
                 margin-bottom: 15px;
                 overflow: hidden;
+
+                &:hover > .menu-restaurant-preview-content-item__check-icon{
+                    width: 25%;
+                }
+
+                &:hover > .menu-restaurant-preview-content-item__check-icon .fa-check-circle{
+                    transform: rotate(1turn);
+                }
                 
 
-
-                .menu-prev-content-item-dish{
+                .menu-restaurant-preview-content-item-dish{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-around;  
                     width: 100%;
-                    height: 100%;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
 
-                    &:hover + .menu-prev-content-item-check{
-                        width: 25%;
+
+                    &__name{
+                        font-size: 1.1em;
+                        font-weight: bold;
                     }
+                }
 
-                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block{
-                        transform: translateX(0);
-                        width: 100%;
-                    }
+                .menu-restaurant-preview-content-item-dish-informations{
+                    display: flex;
+                    justify-content: space-between;
 
-                    &:hover + .menu-prev-content-item-check .menu-prev-content-item-check__icon-block .fa-check-circle{
-                        transform: rotate(1turn);
-                    }
+                    &__ingredient{
+                        font-size: 1em;
+                        color: rgb(63, 63, 63);
+                        -webkit-line-clamp: 1;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
 
-                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name {
-                        display: none;
-                    }
-
-                    &:hover .menu-prev-content-item-dish-block .menu-prev-content-item-dish-block__ingredient-name-hide{
-                        display: block;
-                    }
-
-                    .menu-prev-content-item-dish-block{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        height: 85%;
-                        width: 100%;
-                        margin-left: 10px;
-                        
-
-                        &__title{
-                            font-size: 1.1em;
-                            font-weight: bold;
-                        }
-
-                        &__ingredient{
-                            font-size: 1em;
-                            color: rgb(63, 63, 63);
-                            
-                            .menu-prev-content-item-dish-block__ingredient-name-hide{
-                                display: none;
-                            }
-                        }
-
+                        /* white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: blue;*/
                     }
 
                     &__price{
-                        display: flex;
-                        align-items: flex-end;
-                        height: 80%;
                         font-weight: bold;
-                        margin-right: 30px;
                         color: rgb(63, 63, 63);
+                        padding-right: 20px;
+                        padding-left: 10px;
                     }
-                    
                 }
 
-                .menu-prev-content-item-check{
-                    display: flex;
-                    flex-direction: row-reverse;
-                    width: 0px;
+
+                .menu-restaurant-preview-content-item__check-icon{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 0;
+                    transform-origin: right;
+                    background-color: $color-element-decoration-tertiary;
                     transition: all 500ms;
                     overflow: hidden;
 
-                    
-                    &__icon-block{
-                        display:flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-                        width: 0%;
-                        background-color: $color-element-decoration-tertiary;
-                        transition: all 700ms;
-                        transform: translateX(20px);
-                        
-                        .fa-check-circle{
-                            color: #fff;
-                            font-size: 1.5em;
-                            transform: rotate(0turn);
-                            transition: all 700ms;                            
-                        }
+                    .fa-check-circle{
+                        color: #fff;
+                        font-size: 1.5em;
+                        transform: rotate(0turn);
+                        transition: all 700ms;                            
                     }
+                }               
+            }
+
+
+            /* Animations apparition en cascade des plats du menu */
+
+            .menu-restaurant-preview-content-item1 {
+                animation-name: slideDown;
+                animation-delay: 700ms;
+            }
+              
+              .menu-restaurant-preview-content-item2 {
+                animation-name: slideDown;
+                animation-delay: 900ms;
+            }
+
+              .menu-restaurant-preview-content-item3 {
+                animation-name: slideDown;
+                animation-delay: 1100ms;
+            }
+
+            .menu-restaurant-preview-content-item4 {
+                animation-name: slideDown;
+                animation-delay: 1300ms;
+            }
+
+            
+
+            
+            /* Bouton Commander */
+
+            .menu-restaurant-preview-content-order{
+                @include flexMid; 
+                text-align: center;
+                width: 100%;
+                margin-top: 40px;
+                margin-bottom: 30px;
+        
+                &__main-btn{
+                    @include btn-effect();
                 }
-            }
-
-            .menu-prev-content-item:nth-child(2) {
-                animation-name: slideDown;
-                animation-delay: 700ms;
-            }
-              
-              .menu-prev-content-item:nth-child(3) {
-                animation-name: slideDown;
-                animation-delay: 900ms;
-            }
-
-              .menu-prev-content-item:nth-child(4) {
-                animation-name: slideDown;
-                animation-delay: 1100ms;
-            }
-
-            .menu-prev-content-item:nth-child(5) {
-                animation-name: slideDown;
-                animation-delay: 700ms;
-            }
-              
-              .menu-prev-content-item:nth-child(6) {
-                animation-name: slideDown;
-                animation-delay: 900ms;
-            }
-
-              .menu-prev-content-item:nth-child(7) {
-                animation-name: slideDown;
-                animation-delay: 1100ms;
-            }
-
-            .menu-prev-content-item:nth-child(8) {
-                animation-name: slideDown;
-                animation-delay: 700ms;
-            }
-              
-              .menu-prev-content-item:nth-child(9) {
-                animation-name: slideDown;
-                animation-delay: 900ms;
-            }
-
-              .menu-prev-content-item:nth-child(10) {
-                animation-name: slideDown;
-                animation-delay: 1100ms;
             }
         }  
     }
-
-
-
-    .restaurant-order{
-        @include flexMid;
-        margin-bottom: 100px; 
-        background: #f0f0f0;
-        text-align: center;
-        width: 100%;
-
-        .btn{
-            @include btn-effect();
-        }
-    }  
 }
-
-
