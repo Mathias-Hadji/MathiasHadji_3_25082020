@@ -1,0 +1,43 @@
+@import "../utils/mixins";
+
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #2d3436;
+    color:white;
+    padding: 40px;
+
+    &__logo-website{
+        filter: invert(100%);
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__link{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            i{
+                font-size: 0.8em;
+                width: 25px;
+
+            }
+
+            a{
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+
+
+@import "../utils/variables";
+@import "../utils/animations";
+
+/* Block loading au lancement de la page d'accueil du site */
+
+.loading-page{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+  }
+  
+  .loading-spinner{
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    border-top-color: $color-element-decoration-primary;
+    animation-name: rotate-loading-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 200ms;
+    animation-direction: normal;
+    /*animation-iteration-count: infinite;*/
+  }

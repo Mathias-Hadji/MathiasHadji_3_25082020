@@ -1,0 +1,40 @@
+
+
+/* Animations */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes translateX9999{
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes rotate-loading-animation{
+    0%{
+      transform:rotate(0turn);
+      opacity: 0;
+    }
+    
+    5%{
+      opacity: 1;
+    }
+    
+    100%{
+      transform:rotate(2turn);
+      opacity: 1;
+    }
+  }
