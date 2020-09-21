@@ -13,7 +13,7 @@
 /* LAYOUTS */
 @import "layouts/header";
 @import "layouts/footer";
-@import "layouts/block-menus";
+
 
 
 /* COMPOSANTS */
@@ -22,7 +22,8 @@
 
 
 /* PAGES */
-@import "pages/block-homepage";
+@import "pages/homepage";
+@import "pages/menus";
 
 
 /* RESPONSIVE */
