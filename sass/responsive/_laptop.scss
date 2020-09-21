@@ -1,0 +1,131 @@
+
+@media screen and (min-width:1025px){
+    /* HEADER */
+ 
+    .header{
+        padding: 40px;
+
+        &__icon-backarrow{
+            font-size: 25px;
+        }
+
+        &__logo-website{
+
+            img{
+                width: 200px;
+            }
+        }
+    }
+
+
+    /* SECTION USER LOCATION */
+
+    .main-container-all-page{
+
+        .user-location{
+            height: 70px;
+
+            i{
+                margin-right:15px;
+                font-size: 1.5em;
+            }
+
+            p{
+                font-weight: 700;
+                font-size: 1.3em;
+            }
+        }
+    }
+
+
+
+    /* SECTION SLOGAN */
+
+    .homepage{
+        .homepage-slogan-website{
+            padding: 100px 10px 100px 10px;
+
+            h1{
+                font-size: 2em;
+            }
+            
+            p{
+                font-size: 1.5em;
+            }
+        }  
+    }
+
+
+
+    /* SECTION TUTORIAL */
+
+    .homepage{
+        .homepage-tutorial{
+            padding-right: 120px;
+            padding-left: 120px;
+
+            .homepage-tutorial-row{
+
+                flex-direction: row;
+                justify-content: center;
+
+                .homepage-tutorial-advice{
+                    width: 100%;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+            } 
+        }
+    }
+
+
+
+    /* SECTION RESTAURANT PAGE D'ACCUEIL */
+
+    .homepage{
+        .homepage-restaurants{
+            padding-left: 100px;
+            padding-right: 100px;
+
+            .homepage-restaurants-row{
+                flex-direction: row;
+            }
+        }
+    }
+
+
+    /* MENUS */
+
+    .menu-restaurant{
+        
+        .menu-restaurant-preview{
+            
+            .menu-restaurant-preview-heading{
+                font-size: 1.5em;
+            }
+        }
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+
+        &__logo-website{
+            width: 200px;
+        }
+        
+        .footer-nav{
+
+            &__link{
+
+                i{
+                    font-size: 1em;
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
+
+

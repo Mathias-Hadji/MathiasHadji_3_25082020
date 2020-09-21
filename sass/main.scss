@@ -1,13 +1,13 @@
 
 /* BASE */
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/animations";
+@import "base/fonts.scss";
+@import "base/general-settings.scss";
 
 
 /* UTILS */
-@import "base/fonts.scss";
-@import "base/general-settings.scss";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/animations";
 
 
 /* LAYOUTS */
@@ -23,3 +23,7 @@
 
 /* PAGES */
 @import "pages/block-homepage";
+
+
+/* RESPONSIVE */
+@import "responsive/laptop";

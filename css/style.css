@@ -1,40 +1,5 @@
 @charset "UTF-8";
 /* BASE */
-/* Variables */
-/* Mixins */
-/* Animations */
-@keyframes slideDown {
-  from {
-    transform: translateY(25px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes translateX9999 {
-  0% {
-    transform: translateX(-9999px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotate-loading-animation {
-  0% {
-    transform: rotate(0turn);
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(2turn);
-    opacity: 1;
-  }
-}
-/* UTILS */
 /* Fonts */
 @font-face {
   font-family: "robotoblack";
@@ -116,6 +81,41 @@ body {
   background: #f5f5f5;
 }
 
+/* UTILS */
+/* Variables */
+/* Mixins */
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes translateX9999 {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotate-loading-animation {
+  0% {
+    transform: rotate(0turn);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(2turn);
+    opacity: 1;
+  }
+}
 /* LAYOUTS */
 /* Mixins */
 /* HEADER */
@@ -897,6 +897,82 @@ body {
   -webkit-box-shadow: 7px 10px 51px -6px #383838;
   -moz-box-shadow: 7px 10px 51px -6px #383838;
   box-shadow: 7px 10px 51px -6px #383838;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 1025px) {
+  /* HEADER */
+  .header {
+    padding: 40px;
+  }
+  .header__icon-backarrow {
+    font-size: 25px;
+  }
+  .header__logo-website img {
+    width: 200px;
+  }
+
+  /* SECTION USER LOCATION */
+  .main-container-all-page .user-location {
+    height: 70px;
+  }
+  .main-container-all-page .user-location i {
+    margin-right: 15px;
+    font-size: 1.5em;
+  }
+  .main-container-all-page .user-location p {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  /* SECTION SLOGAN */
+  .homepage .homepage-slogan-website {
+    padding: 100px 10px 100px 10px;
+  }
+  .homepage .homepage-slogan-website h1 {
+    font-size: 2em;
+  }
+  .homepage .homepage-slogan-website p {
+    font-size: 1.5em;
+  }
+
+  /* SECTION TUTORIAL */
+  .homepage .homepage-tutorial {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+  .homepage .homepage-tutorial .homepage-tutorial-row {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .homepage .homepage-tutorial .homepage-tutorial-row .homepage-tutorial-advice {
+    width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  /* SECTION RESTAURANT PAGE D'ACCUEIL */
+  .homepage .homepage-restaurants {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .homepage .homepage-restaurants .homepage-restaurants-row {
+    flex-direction: row;
+  }
+
+  /* MENUS */
+  .menu-restaurant .menu-restaurant-preview .menu-restaurant-preview-heading {
+    font-size: 1.5em;
+  }
+
+  /* FOOTER */
+  .footer__logo-website {
+    width: 200px;
+  }
+  .footer .footer-nav__link i {
+    font-size: 1em;
+    width: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
