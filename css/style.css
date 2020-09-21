@@ -280,7 +280,6 @@ body {
   cursor: pointer;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  animation-delay: 700ms;
   animation-direction: normal;
   animation-fill-mode: both;
   animation-name: slideDown;
@@ -336,14 +335,14 @@ body {
   width: 0;
   transform-origin: right;
   background-color: #99E2D0;
-  transition: all 500ms;
+  transition: all 1s;
   overflow: hidden;
 }
 .menu-restaurant .menu-restaurant-preview .menu-restaurant-preview-content .menu-restaurant-preview-content-item .menu-restaurant-preview-content-item__check-icon .fa-check-circle {
   color: #fff;
   font-size: 1.5em;
   transform: rotate(0turn);
-  transition: all 700ms;
+  transition: all 1s;
 }
 .menu-restaurant .menu-restaurant-preview .menu-restaurant-preview-content .menu-restaurant-preview-content-item1 {
   animation-name: slideDown;

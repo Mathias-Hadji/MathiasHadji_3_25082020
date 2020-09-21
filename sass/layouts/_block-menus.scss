@@ -100,7 +100,6 @@
                 cursor: pointer;
                 animation-duration: 1s;
                 animation-timing-function: ease-in-out;
-                animation-delay: 700ms;
                 animation-direction: normal;
                 animation-fill-mode: both;
                 animation-name: slideDown;
@@ -167,14 +166,14 @@
                     width: 0;
                     transform-origin: right;
                     background-color: $color-element-decoration-tertiary;
-                    transition: all 500ms;
+                    transition: all 1s;
                     overflow: hidden;
 
                     .fa-check-circle{
                         color: #fff;
                         font-size: 1.5em;
                         transform: rotate(0turn);
-                        transition: all 700ms;                            
+                        transition: all 1s;                            
                     }
                 }               
             }
