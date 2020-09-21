@@ -1,0 +1,19 @@
+{
+  "name": "mathiashadji_3_25082020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mathias-Hadji/MathiasHadji_3_25082020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mathias-Hadji/MathiasHadji_3_25082020/issues"
+  },
+  "homepage": "https://github.com/Mathias-Hadji/MathiasHadji_3_25082020#readme"
+}
