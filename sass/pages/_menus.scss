@@ -181,22 +181,22 @@
 
             /* Animations apparition en cascade des plats du menu */
 
-            .menu-restaurant-preview-content-item1 {
+            .menu-restaurant-preview-content-item--slidedownDelay1 {
                 animation-name: slideDown;
                 animation-delay: 700ms;
             }
               
-              .menu-restaurant-preview-content-item2 {
+              .menu-restaurant-preview-content-item--slidedownDelay2 {
                 animation-name: slideDown;
                 animation-delay: 900ms;
             }
 
-              .menu-restaurant-preview-content-item3 {
+              .menu-restaurant-preview-content-item--slidedownDelay3 {
                 animation-name: slideDown;
                 animation-delay: 1100ms;
             }
 
-            .menu-restaurant-preview-content-item4 {
+            .menu-restaurant-preview-content-item--slidedownDelay4 {
                 animation-name: slideDown;
                 animation-delay: 1300ms;
             }
