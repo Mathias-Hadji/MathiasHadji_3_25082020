@@ -144,10 +144,11 @@
                         -webkit-box-orient: vertical;
                         overflow: hidden;
 
-                        /* white-space: nowrap;
-                        overflow: hidden;
+                        /* 
                         text-overflow: ellipsis;
-                        color: blue;*/
+                        white-space: nowrap;
+                        overflow: hidden;
+                        */
                     }
 
                     &__price{
